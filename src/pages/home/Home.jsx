@@ -1,4 +1,5 @@
 import React from 'react'
+import MiniServices from './miniServices/miniServices'
 import "./style.scss"
 
 function Home() {
@@ -35,6 +36,7 @@ function Home() {
       </div>
 
     </div>
+    <MiniServices/>
     </>
 
   )
