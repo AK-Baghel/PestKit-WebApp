@@ -13,7 +13,7 @@ import { MdEmail } from "react-icons/md"
 import { AiOutlineDown } from "react-icons/ai"
 import { useNavigate } from 'react-router-dom'
 
-import "./style.css"
+import "./style.scss"
 
 function Header() {
     const [toggle, setToggle] = useState(true);
@@ -56,7 +56,7 @@ function Header() {
                     </div>
                 </div>
                 <div className="content">
-                    <div className="logo">
+                    <div className="logo" onClick={()=>{navigate('/')}}>
                         <div className="text">Pest<span>Kit</span></div>
                         <FaSpider className='spider' />
                     </div>
@@ -67,11 +67,11 @@ function Header() {
                         <li onClick={()=>{navigate('/projects')}}>Projects</li>
                         <li className='arrow' onClick={display} >Pages<AiOutlineDown size={"15px"}/> 
                             <div className={`float ${float ? "set" : ""} `}>
-                                <div className="items">Pricing Plan</div>
-                                <div className="items">Blog Post</div>
-                                <div className="items">Team Members</div>
-                                <div className="items">Testimonial</div>
-                                <div className="items">404 Page</div>
+                                <div className="items" onClick={()=>{navigate('/pricing')}}>Pricing Plan</div>
+                                <div className="items" onClick={()=>{navigate('/blog')}}>Blog Post</div>
+                                <div className="items" onClick={()=>{navigate('/team')}}>Team Members</div>
+                                <div className="items" onClick={()=>{navigate('/testimonial')}}>Testimonial</div>
+                                <div className="items" onClick={()=>{navigate('/page404')}}>404 Page</div>
                             </div>
                         </li>
                         <li onClick={()=>{navigate('/contact')}}>Contact</li>
