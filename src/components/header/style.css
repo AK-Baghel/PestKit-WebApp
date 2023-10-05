@@ -7,25 +7,29 @@
     align-items: center;
     width: 100%;
 }
-.contact{
+
+.contact {
     background-color: yellow;
     width: 100%;
     display: flex;
     justify-content: center;
     padding: 3px 0;
 }
-.details{
+
+.details {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 6px;
 }
-.detailsData{
+
+.detailsData {
     color: black;
     font-size: 1.2rem;
     font-weight: 300;
 }
-.detailsLogo{
+
+.detailsLogo {
     color: black;
     font-size: 1.4rem;
 }
@@ -37,12 +41,14 @@
     flex-wrap: wrap;
     padding: 8px;
 }
-.input{
+
+.input {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-input{
+
+input {
     border: none;
     width: 20rem;
     border-bottom-left-radius: 20px;
@@ -51,30 +57,35 @@ input{
     outline: none;
     font-size: 1rem;
 }
-.search{
+
+.search {
     background-color: white;
-    text-align:center ;
+    text-align: center;
     padding: 5.5px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     font-size: 1.5rem;
     cursor: pointer;
 }
-.socials{
+
+.socials {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
 }
-.line{
+
+.line {
     content: "";
     width: 1px;
     background-color: black;
     height: 2.2rem;
 }
-.sl{
+
+.sl {
     font-size: 1.2rem;
 }
+
 .logo {
     display: flex;
     justify-content: center;
@@ -115,12 +126,42 @@ li {
 .active {
     color: yellow;
 }
+.select{
+    
+}
 
 .arrow {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: end;
     gap: 6px;
+}
+
+.float {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    width: 10.5rem;
+    background-color: yellow;
+    color: black;
+    position: absolute;
+    top: 2.5rem;
+    left: -0.5rem;
+    border-radius: 10px;
+    padding: 0.5rem 0;
+}
+.set{
+    display: none;
+}
+
+.items {
+    padding:0 1.4rem;
+}
+
+.items:hover {
+    background-color: black;
+    color: yellow;
 }
 
 .mobile {
@@ -140,7 +181,7 @@ li {
         padding: 8px;
         gap: 2rem;
     }
-    
+
     .mobile {
         display: block;
         background-color: yellow;
@@ -151,19 +192,20 @@ li {
         right: 10px;
         top: 20px;
     }
-    ul{
+
+    ul {
         flex-direction: column;
         justify-content: unset;
         align-items: unset;
         margin-left: 2rem;
         margin-bottom: 1rem;
-        
+
     }
-    
+
     .show {
         display: none;
-    }    
-    
+    }
+
     .arrow {
         justify-content: unset;
     }
@@ -188,7 +230,8 @@ li {
         font-size: 2.5rem;
 
     }
-    .contact{
+
+    .contact {
         display: none;
     }
 }

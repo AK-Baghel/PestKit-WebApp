@@ -11,11 +11,19 @@ import { FaLocationDot } from "react-icons/fa6"
 import { IoCall } from "react-icons/io5"
 import { MdEmail } from "react-icons/md"
 import { AiOutlineDown } from "react-icons/ai"
+import { useNavigate } from 'react-router-dom'
 
 import "./style.css"
 
 function Header() {
     const [toggle, setToggle] = useState(true);
+    const [float,setFloat]=useState(true);
+    const navigate=useNavigate();
+
+    const display=(e)=>{
+        setFloat(!float)
+    }
+
 
     return (
         <>
@@ -53,12 +61,20 @@ function Header() {
                         <FaSpider className='spider' />
                     </div>
                     <ul className={toggle ? "show" : ""}>
-                        <li className='active'>Home</li>
-                        <li>About</li>
-                        <li>Services</li>
-                        <li>Projects</li>
-                        <li className='arrow'>Pages<AiOutlineDown size={"15px"} /></li>
-                        <li>Contact</li>
+                        <li className='active' onClick={()=>{navigate('/')}}>Home</li>
+                        <li onClick={()=>{navigate('/about')}}>About</li>
+                        <li onClick={()=>{navigate('/services')}}>Services</li>
+                        <li onClick={()=>{navigate('/projects')}}>Projects</li>
+                        <li className='arrow' onClick={display} >Pages<AiOutlineDown size={"15px"}/> 
+                            <div className={`float ${float ? "set" : ""} `}>
+                                <div className="items">Pricing Plan</div>
+                                <div className="items">Blog Post</div>
+                                <div className="items">Team Members</div>
+                                <div className="items">Testimonial</div>
+                                <div className="items">404 Page</div>
+                            </div>
+                        </li>
+                        <li onClick={()=>{navigate('/contact')}}>Contact</li>
                     </ul>
                 <FaBars className='mobile' size={"25px"} onClick={() => { setToggle(!toggle) }} />
                 </div>
