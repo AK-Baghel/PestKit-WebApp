@@ -1,0 +1,33 @@
+.serviceContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+.serviceBox1{
+    text-align: center;
+}
+.serviceTitle{
+    display: inline-block;
+    font-size: 1.5rem;
+    padding: 0.3rem 1.5rem;
+    border: 2px solid rgb(255, 251, 0);
+    border-radius: 25px;
+}
+.serviceBox2{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+.serviceHeading{
+    font-size: 3rem;
+    font-weight: 900;
+}
+/* @media (max-width:414px){
+    .serviceContainer{
+        
+        margin-bottom: 20rem;
+    }
+} */

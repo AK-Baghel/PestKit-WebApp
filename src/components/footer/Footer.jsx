@@ -56,16 +56,20 @@ function Footer() {
                 </div>
             </div>
             <div className="footerBox2">
-                <div className="footerLogo">
+                <div className="footerBox">
                     <div className="footerText1">Pest</div>
                     <div className="footerText2">Kit</div>
-                    <FaSpider />
+                    <FaSpider className='footerSpider'/>
                 </div>
-                <div className="footerSocail">
-                    <FaFacebookF />
-                    <FaTwitter />
-                    <FaLinkedinIn />
-                    <FaInstagram />
+                <div className="footerBox footerSocials">
+                    <FaFacebookF className='footerSocial'/>
+                    <FaTwitter className='footerSocial'/>
+                    <FaLinkedinIn className='footerSocial'/>
+                    <FaInstagram className='footerSocial'/>
+                </div>
+                <div className="footerBox footerDesigns">
+                    <div className="footerDesign">Designed By <span className='footerDesignSpan'>HTML Codex</span></div>
+                    <div className="footerDesign">Designed By <span className='footerDesignSpan'>ThemeWagon</span></div>
                 </div>
             </div>
         </div>

@@ -1,0 +1,66 @@
+.serviceTileContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.serviceTileBox{
+    width: 33vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:2rem ;
+    border-radius: 10px;
+    background-color: #f5f6f6;
+    margin-bottom: 1rem;
+    gap: 0.7rem;
+}
+
+.serviceTileSpider{
+    font-size: 4rem;
+    background-color: black;
+    color: yellow;
+    padding: 2rem;
+    border-radius: 50%;
+}
+.serviceLogoRotate{
+    transition: all 0.5s ease;
+}
+.serviceLogoRotate:hover{
+    background-color: yellow;
+    color: black;
+    transform: rotate(360deg);
+}
+.serviceTileTitle{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.serviceTileDesc{
+    font-size: 1.4rem;
+    text-align: center;
+    color: rgb(97, 97, 97);
+}
+.seviceTileButton{
+    padding: 0.9rem 1.6rem;
+    font-size: 1.3rem;
+    border-radius: 30px;
+
+    background: linear-gradient(to right, black 50%, yellow 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    cursor: pointer;
+    border: 1px solid yellow;
+
+}
+.seviceTileButton:hover {
+    background-position: left bottom;
+    color: yellow;
+}
+
+@media (max-width:414px){
+    .serviceTileBox{
+        width: 68vw;
+    }
+}

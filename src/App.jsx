@@ -10,6 +10,8 @@ import Team from "./pages/team/Team"
 import Testimonial from "./pages/testimonial/Testimonial"
 import Page404 from "./pages/404/Page404"
 import Contact from "./pages/contact/Contact"
+import Footer from "./components/footer/Footer"
+
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
@@ -33,6 +35,7 @@ function App() {
           <Route path="/page404" element={<Page404/>}/>
           <Route path="/contact" element={<Contact/>}/>
         </Routes>
+        <Footer/>
     </>
   )
 }

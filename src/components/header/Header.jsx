@@ -74,7 +74,7 @@ function Header() {
                                 <div className="items" onClick={()=>{navigate('/page404')}}>404 Page</div>
                             </div>
                         </li>
-                        <li onClick={()=>{navigate('/contact')}}>Contact</li>
+                        <li className='headerLi' onClick={()=>{navigate('/contact')}}>Contact</li>
                     </ul>
                 <FaBars className='mobile' size={"25px"} onClick={() => { setToggle(!toggle) }} />
                 </div>
