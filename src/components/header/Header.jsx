@@ -60,12 +60,12 @@ function Header() {
                         <div className="text">Pest<span>Kit</span></div>
                         <FaSpider className='spider' />
                     </div>
-                    <ul className={toggle ? "show" : ""}>
-                        <li className='active' onClick={()=>{navigate('/')}}>Home</li>
-                        <li onClick={()=>{navigate('/about')}}>About</li>
-                        <li onClick={()=>{navigate('/services')}}>Services</li>
-                        <li onClick={()=>{navigate('/projects')}}>Projects</li>
-                        <li className='arrow' onClick={display} >Pages<AiOutlineDown size={"15px"}/> 
+                    <ul className={`headerUl ${toggle ? "show" : ""}`}>
+                        <li className='active headerLi' onClick={()=>{navigate('/')}}>Home</li>
+                        <li className='headerLi' onClick={()=>{navigate('/about')}}>About</li>
+                        <li className='headerLi' onClick={()=>{navigate('/services')}}>Services</li>
+                        <li className='headerLi' onClick={()=>{navigate('/projects')}}>Projects</li>
+                        <li className='arrow headerLi' onClick={display} >Pages<AiOutlineDown size={"15px"}/> 
                             <div className={`float ${float ? "set" : ""} `}>
                                 <div className="items" onClick={()=>{navigate('/pricing')}}>Pricing Plan</div>
                                 <div className="items" onClick={()=>{navigate('/blog')}}>Blog Post</div>

@@ -109,7 +109,7 @@ span {
     color: white;
 }
 
-ul {
+.headerUl {
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -117,7 +117,7 @@ ul {
     flex-wrap: wrap;
 }
 
-li {
+.headerLi {
     list-style: none;
     font-size: 1.2rem;
     cursor: pointer;
@@ -196,7 +196,7 @@ li {
         top: 20px;
     }
 
-    ul {
+    .headerUl {
         flex-direction: column;
         justify-content: unset;
         align-items: unset;
@@ -237,6 +237,5 @@ li {
     .contact {
         display: none;
     }
-
 
 }
