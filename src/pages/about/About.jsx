@@ -1,8 +1,9 @@
 import React from 'react'
+import AboutSecton1 from './aboutSection1/AboutSecton1'
 
 function About() {
   return (
-    <div>About</div>
+    <AboutSecton1/>
   )
 }
 

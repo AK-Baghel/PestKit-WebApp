@@ -1,0 +1,203 @@
+.hContainer {
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    overflow: scroll;
+    color: white;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.hDiv1 {
+    background-image: url("../../../assets/carousel-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-width: 100%;
+    min-height: 100vh;
+    overflow-x: scroll;
+}
+
+.hContent {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.418);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.data {
+    padding: 15rem;
+}
+
+.hDiv2 {
+    background-image: url("../../../assets/carousel-2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-width: 100%;
+    min-height: 100vh;
+    overflow-x: scroll;
+}
+
+.hDiv1::-webkit-scrollbar {
+    display: none;
+}
+
+.hDiv2::-webkit-scrollbar {
+    display: none;
+}
+
+.hHeading {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.hDesc {
+    width: 50rem;
+    font-size: 5.5rem;
+    line-height: 5rem;
+    font-weight: 800;
+    margin-top: 0.5rem;
+}
+
+.hButton {
+    width: fit-content;
+    color: black;
+    font-size: 1.5rem;
+    background-color: yellow;
+    border-radius: 50px;
+    padding: 15px 40px;
+    margin-top: 1rem;
+
+    background: linear-gradient(to right, black 50%, yellow 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    cursor: pointer;
+    border: 1px solid yellow;
+
+}
+
+.hButton:hover {
+    background-position: left bottom;
+    color: white;
+}
+
+
+.hLeft,
+.hRight {
+    background-color: yellow;
+    font-weight: 600;
+    position: absolute;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    top: 50%;
+    width: 3rem;
+    text-align: right;
+    font-size: 3rem;
+    padding: 0 1rem;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border: 1px solid yellow;
+    border-left: none;
+
+    background: linear-gradient(to right, black 50%, yellow 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+}
+
+.hRight {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    text-align: left;
+    right: 0;
+    border-right: none;
+    border-left: 1px solid yellow;
+}
+
+.hLeft:hover {
+    background-position: left bottom;
+    color: white;
+}
+
+.hRight:hover {
+    color: white;
+    background-position: left bottom;
+}
+
+.hDots {
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    left: 48%;
+    bottom: 1rem;
+}
+
+.hDot1,
+.hDot2 {
+    content: "";
+    background-color: black;
+    border: 1px solid yellow;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    z-index: 5;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.hDot1:hover {
+    background-color: yellow;
+}
+
+.hDot2:hover {
+    background-color: yellow;
+}
+
+@media (max-width:414px) {
+    .hDiv1{
+        width: 20%;
+    }
+
+    .carousel {
+        height: 60vh;
+        display: flex;
+        overflow-y: hidden;
+        color: white;
+    }
+
+    .hLeft,
+    .hRight {
+        display: none;
+    }
+
+    .hHeading {
+        font-size: 1.6rem;
+        font-weight: bolder;
+    }
+    
+    .hDesc {
+        width: 90%;
+        font-size:3.5rem;
+        line-height: 3rem;
+        font-weight: 600;
+        margin-top: 0.5rem;
+    }
+    .data {
+        padding: 4rem;
+    }
+    .hContent {
+        width: 100%;
+        height: 60%;
+        
+    }
+}
