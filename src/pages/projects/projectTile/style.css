@@ -1,0 +1,69 @@
+.projectTileContainer {
+    position: relative;
+}
+
+.projectTileBlack {
+    background-color: black;
+    content: "";
+    width: 35vw;
+    height: 31vh;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.projectTileYellow {
+    background-color: yellow;
+    content: "";
+    width: 35vw;
+    height: 31vh;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.projectTileImg {
+    position: absolute;
+    top: 1.7rem;
+    left: 1.6rem;
+    width: 90%;
+    border-radius: 15px;
+}
+
+.projectTileImgBanner {
+    text-align: center;
+    padding: 15px 30px;
+    background-color: yellow;
+    border-radius: 10px;
+    width: 12vw;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    position: absolute;
+    cursor: pointer;
+    top: 40%;
+    left: 27%;
+    animation-name: toggle-up;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    transform: all 0.5 ease;
+    
+}
+
+@keyframes toggle-up {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width:414px) {
+
+    .projectTileBlack,
+    .projectTileYellow {
+        width: 88vw;
+        height: 18vh;
+    }
+
+    .projectTileImg {
+        left: 1.3rem;
+
+    }
+}
