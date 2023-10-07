@@ -5,6 +5,7 @@ import AboutSecton1 from '../about/aboutSection1/AboutSecton1'
 import Projects from '../projects/Projects'
 import Services from '../services/Services'
 import Blog from '../blog/Blog'
+import AboutSection2 from '../about/aboutSection2/AboutSection2'
 import "./style.scss"
 
 function Home() {
@@ -16,6 +17,7 @@ function Home() {
       <Services/>
       <Projects/>
       <Blog/>
+      <AboutSection2/>
     </>
 
   )

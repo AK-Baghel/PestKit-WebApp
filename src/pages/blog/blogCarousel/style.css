@@ -1,11 +1,27 @@
-.dZkckO, .bBfHpH{
-    top: -60px;
+.blogCarouselContainer {
+    width: 98vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10vh;
 }
-@media (max-width:414px){
-    .dZkckO{
-        display: block;
-    }
-    .cSNndH{
-        display: block;
+
+.blogCarouselBox {
+    width: 87vw;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    overflow-x: scroll;
+    gap: 2rem;
+}
+
+.blogCarouselBox::-webkit-scrollbar {
+    display: none;
+}
+@media (max-width:414px) {
+
+    .blogCarouselContainer {
+        height: 70vh;
     }
 }

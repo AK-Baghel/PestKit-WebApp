@@ -1,0 +1,117 @@
+/* .aboutSection2Container{
+    margin-top: 10rem;
+} */
+.aboutSection2Section {
+    background-image: url("../../../assets/carousel-1.jpg");
+    background-position: center;
+    background-size: cover;
+    /* width: 100vw; */
+    height: 100vh;
+
+}
+
+.aboutSection2Transparency {
+    background-color: rgba(0, 0, 0, 0.541);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7vw;
+
+}
+
+.aboutSection2Img {
+    width: 34vw;
+    border-radius: 50%;
+}
+
+.aboutSection2Items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    width: 38vw;
+    gap: 2.5rem;
+}
+
+.aboutSection2Item {
+    font-size: 2.9rem;
+    font-weight: 900;
+}
+
+.aboutSection2Email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5.5vh;
+}
+
+.aboutSection2Input {
+    width: 23vw;
+    height: 5.5vh;
+    font-size: 1.2rem;
+}
+
+.aboutSection2Button {
+
+    color: black;
+    width: 9vw;
+    height: 5.5vh;
+    font-size: 1.2rem;
+    padding: 13px 9px 3px 40px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+
+    background: linear-gradient(to right, black 50%, yellow 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    cursor: pointer;
+    /* border: 1px solid yellow; */
+}
+
+.aboutSection2Button:hover {
+    background-position: left bottom;
+    color: yellow;
+    /* border-color: black; */
+}
+
+@media (max-width:414px) {
+    .aboutSection2Transparency {
+        flex-direction: column;
+    }
+
+    .aboutSection2Img {
+        width: 65vw;
+    }
+
+    .aboutSection2Item {
+        font-size: 2rem;
+    }
+
+    .aboutSection2Items {
+        width: 90vw;
+    }
+
+    .aboutSection2Input {
+        width: 32vw;
+        height: 5.4vh;
+    }
+
+    .aboutSection2Button {
+
+        width: 32vw;
+        height: 5vh;
+        padding: 20px 9px 0px 40px;
+
+    }
+
+    .aboutSection2Section {
+
+        height: 70vh;
+        
+    }
+}
