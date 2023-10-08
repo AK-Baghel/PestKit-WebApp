@@ -1,0 +1,137 @@
+.pricingTileContainer {
+    min-width: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f6f6;
+    flex-direction: column;
+    padding-block: 1rem;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+
+}
+
+.pricingTileContainerShadow:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    transform: translateY(-20px);
+}
+
+.pricingTileBox1 {
+    margin-top: -1rem;
+    border-radius: 10px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    text-align: center;
+    background-color: yellow;
+    transition: all 0.2s ease;
+}
+
+.pricingTileBox1Shadow1 {
+    box-shadow: 0 20px 2px -2px rgb(197, 197, 44);
+}
+.pricingTileBox1Shadow2{
+    box-shadow: 0 20px 2px -2px rgb(170, 170, 170);
+
+}
+
+.pricingTileLevel {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-block: 1rem;
+}
+
+.pricingTileLine {
+    width: 25vw;
+    content: "";
+    background-color: black;
+    height: 2px;
+}
+
+.pricingTileMoney {
+    margin-top: 3rem;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.pricingTileMo {
+    font-size: 1.5rem;
+    color: grey;
+}
+
+.pricingTileTitle {
+    color: grey;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+.pricingTileBox2 {
+    text-align: center;
+    margin-block: 2rem;
+    color: rgb(51, 51, 51);
+    font-size: 1.4rem;
+}
+
+.pricingTileList {
+    cursor: text;
+    margin-block: 1rem;
+}
+
+.pricingTileClose {
+    color: red;
+}
+
+.pricingTileButton {
+    font-size: 1.6rem;
+    padding: 0.7rem 2.1rem;
+    border-radius: 30px;
+    background: linear-gradient(to right, black 50%, yellow 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    cursor: pointer;
+    /* border: 2px solid yellow; */
+
+}
+
+.pricingTileButton:hover {
+    background-position: left bottom;
+    color: yellow;
+}
+
+.pricingTileButtonShadow{
+    color: white;
+    background: linear-gradient(to right, yellow 50%, black 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    cursor: pointer;
+}
+.pricingTileButtonShadow:hover{
+    background-position: left bottom;
+    color: black;
+}
+
+.pricingTileStandard{
+    color: yellow;
+    background-color: black;
+}
+.pricingTileStandardLine{
+    background-color: yellow;
+}
+.pricingTileStandardTitle{
+    color: white;
+}
+
+@media (max-width:414px) {
+    .pricingTileContainer {
+        width: 80vw;
+
+    }
+    .pricingTileBox1 {
+        width: 80vw;
+    }
+    .pricingTileLine{
+        width: 80vw;
+    }
+}
