@@ -9,7 +9,7 @@ function PricingTile({ level, money}) {
         <div className={`pricingTileContainer ${shadow ? "pricingTileContainerShadow" :""}`} onMouseOver={()=>{setShadow(true)}} onMouseOut={()=>{setShadow(false)}} >
             <div className={`pricingTileBox1 ${level==="Standard" && shadow ? "pricingTileBox1Shadow2" : ""} ${shadow ? "pricingTileBox1Shadow1" :""} ${level==="Standard" ? "pricingTileStandard":""} `} >
                 <div className= {`pricingTileLevel ${level==="Standard" ? "pricingTileStandard" : ""}`}>{level}</div>
-                <div className="pricingTileLine pricingTileStandardLine"/>
+                <div className= {`pricingTileLine ${level==="Standard" ? "pricingTileStandardLine":""}`}/>
                 <div className="pricingTileMoney">${money}<span className= {`pricingTileMo ${level==="Standard" ? "pricingTileStandardTitle":""}`}>/mo</span></div>
                 <div className= {`pricingTileTitle ${level==="Standard" ? "pricingTileStandardTitle":""}`}>{level} Pest Control</div>
             </div>
