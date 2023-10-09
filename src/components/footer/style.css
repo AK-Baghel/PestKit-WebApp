@@ -135,6 +135,18 @@
     color: black;
     padding: 12px;
     border-radius: 50%;
+    background: linear-gradient(to right, black 50%, yellow 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .3s ease-out;
+    cursor: pointer;
+    border: 1px solid yellow;
+
+}
+
+.footerSocial:hover {
+    background-position: left bottom;
+    color: yellow;
 }
 
 .footerDesigns {

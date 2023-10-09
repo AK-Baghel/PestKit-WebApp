@@ -7,6 +7,7 @@ import Services from '../services/Services'
 import Blog from '../blog/Blog'
 import AboutSection2 from '../about/aboutSection2/AboutSection2'
 import Pricing from '../pricing/Pricing'
+import Team from '../team/Team'
 import "./style.scss"
 
 function Home() {
@@ -20,6 +21,8 @@ function Home() {
       <Blog/>
       <AboutSection2/>
       <Pricing/>
+      <Team/>
+
     </>
 
   )
