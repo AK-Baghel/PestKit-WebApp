@@ -1,0 +1,68 @@
+.contactContainer{
+    display: flex;
+    gap: 3rem;
+}
+.contactForm{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    gap: 1rem;
+}
+.contactFormDetails{
+    font-size: 1.1rem;
+}
+.contactFormSapn{
+    color: rgb(245, 222, 19);
+    font-weight: 700;
+    cursor: pointer;
+}
+.contactFormPage{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    /* padding-inline: 1rem; */
+}
+.contactFormPageText, .contactFormPageTextArea{
+    font-size: 1.2rem;
+    border: 1px solid rgb(189, 189, 189);
+    width: 95%;
+    border-radius: 15px;
+    height: 6vh;
+}
+.contactFormPageText:focus{
+    border:2px solid rgb(255, 238, 0);
+}
+.contactFormPageTextArea:focus{
+    outline-color: rgb(255, 238, 0);
+}
+.contactFormPageTextArea{
+    width: 95%;
+    height: 25vh;
+    padding: 1rem;
+}
+.contactButton{
+    font-size: 1.2rem;
+    width: 9vw;
+    height: 4vh;
+}
+.contactFormSection3{
+    margin-block: 3.5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+@media (max-width:414px){
+    .contactContainer{
+        flex-direction: column;
+    }
+    .contactForm{
+        width: 80vw;
+    }
+    .contactButton{
+        font-size: 1.2rem;
+       width: 30vw;
+        height: 3vh;
+    }
+    .mapCompo{
+        display: none;
+    }
+}
