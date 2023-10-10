@@ -1,0 +1,23 @@
+.testimonialCarouselContainer{
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.testimonialCarouselBox{
+    display: flex;
+    gap: 3rem;
+    overflow: scroll;
+}
+.testimonialCarouselBox::-webkit-scrollbar {
+    display: none;
+}
+@media (max-width:414px) {
+
+    .testimonialCarouselContainer{
+        width: 80vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

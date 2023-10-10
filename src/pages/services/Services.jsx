@@ -5,7 +5,8 @@ import "./style.css"
 
 function Services() {
   return (
-    <div className="serviceContainer">
+    <>
+      <div className="serviceContainer">
       <div className="serviceBox1">
         <div className="serviceTitle">Our Services</div>
         <div className="serviceHeading">Common Pest Control Services</div>
@@ -20,6 +21,7 @@ function Services() {
         <div className="seviceTileButton">MORE SERVICES</div>
       </div>
     </div>
+    </>
   )
 }
 

@@ -1,0 +1,55 @@
+.page404Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    /* gap: 0.5rem; */
+    line-height: 3rem;
+}
+.page404Error{
+    color: yellow;
+    font-size: 7rem;
+}
+.page404Number{
+    font-size: 6rem;
+    font-weight: 900;
+}
+.page404Title{
+    margin-top: 1.5rem;
+    font-size: 3rem;
+}
+.page404Desc{
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    text-align: center;
+    width: 42vw;
+    color: rgb(82, 82, 82);
+}
+.page404Button{
+    margin-top: 2rem;
+    padding: 0.6rem 2.3rem;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    background: linear-gradient(to right, black 50%, yellow 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    cursor: pointer;
+
+}
+
+.page404Button:hover {
+    background-position: left bottom;
+    color: yellow;
+}
+
+@media (max-width:414px){
+    .page404Desc{
+        width: 80vw;
+    }
+    .page404Container{
+        height: 70vh;
+    }
+}

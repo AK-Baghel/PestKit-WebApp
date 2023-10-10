@@ -8,6 +8,7 @@ import Blog from '../blog/Blog'
 import AboutSection2 from '../about/aboutSection2/AboutSection2'
 import Pricing from '../pricing/Pricing'
 import Team from '../team/Team'
+import Testimonial from '../testimonial/Testimonial'
 import "./style.scss"
 
 function Home() {
@@ -16,13 +17,13 @@ function Home() {
       <Carousel />
       <MiniServices />
       <AboutSecton1 />
-      <Services/>
-      <Projects/>
-      <Blog/>
-      <AboutSection2/>
-      <Pricing/>
-      <Team/>
-
+      <Services />
+      <Projects />
+      <Blog />
+      <AboutSection2 />
+      <Pricing />
+      <Team />
+      <Testimonial />
     </>
 
   )

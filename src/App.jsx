@@ -1,9 +1,7 @@
-import { useState } from 'react'
-
 import Home from './pages/home/Home'
 import About from "./pages/about/About"
-import Services from "./pages/services/Services"
 import Projects from "./pages/projects/Projects"
+import ServiceAndTestimonial from './pages/services/ServiceAndTestimonial'
 import Pricing from "./pages/pricing/Pricing"
 import Blog from "./pages/blog/Blog"
 import Team from "./pages/team/Team"
@@ -14,8 +12,9 @@ import Footer from "./components/footer/Footer"
 
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
 import './App.css'
+
+import {AiOutlineArrowUp} from "react-icons/ai"
 import Header from './components/header/Header'
 
 function App() {
@@ -26,7 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/about" element={<About/>}/>
-          <Route path="/services" element={<Services/>}/>
+          <Route path="/services" element={<ServiceAndTestimonial/>}/>
           <Route path="/projects" element={<Projects/>}/>
           <Route path="/pricing" element={<Pricing/>}/>
           <Route path="/blog" element={<Blog/>}/>
@@ -34,8 +33,14 @@ function App() {
           <Route path="/testimonial" element={<Testimonial/>}/>
           <Route path="/page404" element={<Page404/>}/>
           <Route path="/contact" element={<Contact/>}/>
+          <Route path="*" element={<Page404/>}/>
         </Routes>
         <Footer/>
+        {
+          <AiOutlineArrowUp className='homeButton' onClick={()=>{window.scroll({top:0 , left:0 , behavior:"smooth"})}}/>
+
+        }
+
     </>
   )
 }
