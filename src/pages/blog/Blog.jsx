@@ -3,7 +3,7 @@ import BlogCarosel from './blogCarousel/BlogCarosel'
 
 function Blog() {
   return (
-    <div className="serviceContainer">
+    <div className="serviceContainer myMargin">
       <div className="serviceBox1">
         <div className="serviceTitle">Our Blog</div>
         <div className="serviceHeading">Latest Blog & News</div>
@@ -17,3 +17,4 @@ function Blog() {
 }
 
 export default Blog
+

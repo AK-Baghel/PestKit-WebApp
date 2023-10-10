@@ -1,7 +1,7 @@
 .pricingWidth{
     width: 35vw;
 }
-@media (max-width:414px){
+@media (max-width:430px){
     .pricingWidth{
         width: 80vw;
         font-size: 2.3rem;

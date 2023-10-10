@@ -5,7 +5,7 @@ import "./style.css"
 
 function Pricing() {
   return (
-    <div className="serviceContainer">
+    <div className="serviceContainer myMargin">
       <div className="serviceBox1">
         <div className="serviceTitle">Our Pricing</div>
         <div className="serviceHeading pricingWidth">Affordable Pricing Plan For Pest Control Services</div>

@@ -10,7 +10,7 @@ import project6 from "../../assets/project-6.jpg"
 
 function Projects() {
   return (
-    <div className="serviceContainer">
+    <div className="serviceContainer myMargin">
       <div className="serviceBox1">
         <div className="serviceTitle">Our Project</div>
         <div className="serviceHeading">Our recently completed projects</div>

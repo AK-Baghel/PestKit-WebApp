@@ -45,7 +45,7 @@
     color: yellow;
 }
 
-@media (max-width:414px){
+@media (max-width:430px){
     .page404Desc{
         width: 80vw;
     }

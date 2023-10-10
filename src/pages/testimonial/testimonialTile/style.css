@@ -76,7 +76,7 @@
 	color: gray;
 }
 
-@media (max-width:414px) {
+@media (max-width:430px) {
 	.testimonialTileContainer {
 		width: 75vw;
 	}

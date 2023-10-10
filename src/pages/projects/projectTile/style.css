@@ -54,16 +54,65 @@
     }
 }
 
-@media (max-width:414px) {
+@media (max-width:430px) {
 
     .projectTileBlack,
     .projectTileYellow {
-        width: 88vw;
-        height: 18vh;
+        width: 83vw;
+        height: 23vh;
     }
 
     .projectTileImg {
         left: 1.3rem;
+        width: 87%;
+    }
+}
 
+@media (max-width:410px) {
+
+    .projectTileBlack,
+    .projectTileYellow {
+        height: 22vh;
+    }
+}
+@media (max-width:400px) {
+
+    .projectTileBlack,
+    .projectTileYellow {
+        height: 21vh;
+    }
+}
+@media (max-width:370px) {
+
+    .projectTileBlack,
+    .projectTileYellow {
+        width: 85vw;
+        height: 21vh;
+    }
+
+    .projectTileImg {
+        left: 1.3rem;
+        width: 88%;
+    }
+}
+@media (max-width:360px) {
+
+    .projectTileBlack,
+    .projectTileYellow {
+        height: 20vh;
+    }
+}
+@media (max-width:350px) {
+
+    .projectTileBlack,
+    .projectTileYellow {
+        height: 19vh;
+    }
+}
+@media (max-width:340px) {
+
+    .projectTileBlack,
+    .projectTileYellow {
+        height: 18vh;
     }
 }

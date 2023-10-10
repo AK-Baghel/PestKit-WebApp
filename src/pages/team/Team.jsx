@@ -7,7 +7,7 @@ import img4 from "../../assets/team-4.jpg"
 
 function Team() {
   return (
-    <div className="serviceContainer">
+    <div className="serviceContainer myMargin">
       <div className="serviceBox1">
         <div className="serviceTitle">Our Team</div>
         <div className="serviceHeading">Our Team Members</div>

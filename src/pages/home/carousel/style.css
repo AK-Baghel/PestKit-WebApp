@@ -163,7 +163,7 @@
     background-color: yellow;
 }
 
-@media (max-width:414px) {
+@media (max-width:430px) {
     .hDiv1{
         width: 20%;
     }

@@ -60,7 +60,7 @@
     color: yellow;
 }
 
-@media (max-width:414px){
+@media (max-width:430px){
     .serviceTileBox{
         width: 68vw;
     }

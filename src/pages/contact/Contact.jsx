@@ -6,7 +6,7 @@ import "./style.css"
 
 function Contact() {
   return (
-    <div className="serviceContainer">
+    <div className="serviceContainer myMargin">
       <div className="serviceBox1">
         <div className="serviceTitle">Get In Touch</div>
         <div className="serviceHeading">Contact for any query</div>
