@@ -6,15 +6,41 @@ app.use(cors());
 
 require('./db/config')
 const Contact=require("./db/ContactForm")
+const User=require("./db/UserData")
 
-app.get("/",(req,resp)=>{
-    resp.send("hello how are you")
+app.get("/formData",async (req,resp)=>{
+    let formData=await Contact.find();
+    if(formData.length>0){
+        resp.send(formData)
+    }
+    else{
+        resp.send({result:"NO PRODUCTS FOUND!!!"})
+    }
+
 })
+
 app.post("/contact-form",async (req,resp)=>{
     let contact=new Contact(req.body)
     let result=await contact.save();
     resp.send(result)
 
+})
+
+
+app.get("/userData",async(req,resp)=>{
+    let userData=await User.find();
+    if(userData.length>0){
+        resp.send(userData)
+    }
+    else{
+        resp.send({result:"NO PRODUCTS FOUND!!!"})
+    }
+})
+
+app.post("/user-data",async (req,resp)=>{
+    let user=new User(req.body);
+    let result=await user.save();
+    resp.send(result);
 })
 
 app.listen(5000);

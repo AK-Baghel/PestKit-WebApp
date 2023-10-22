@@ -17,10 +17,10 @@ import "./style.scss"
 
 function Header() {
     const [toggle, setToggle] = useState(true);
-    const [float,setFloat]=useState(true);
-    const navigate=useNavigate();
+    const [float, setFloat] = useState(true);
+    const navigate = useNavigate();
 
-    const display=(e)=>{
+    const display = (e) => {
         setFloat(!float)
     }
 
@@ -56,27 +56,35 @@ function Header() {
                     </div>
                 </div>
                 <div className="content">
-                    <div className="logo" onClick={()=>{navigate('/')}}>
+                    <div className="logo" onClick={() => { navigate('/') }}>
                         <div className="text">Pest<span>Kit</span></div>
                         <FaSpider className='spider' />
                     </div>
                     <ul className={`headerUl ${toggle ? "show" : ""}`}>
-                        <li className='active headerLi' onClick={()=>{navigate('/')}}>Home</li>
-                        <li className='headerLi' onClick={()=>{navigate('/about')}}>About</li>
-                        <li className='headerLi' onClick={()=>{navigate('/services')}}>Services</li>
-                        <li className='headerLi' onClick={()=>{navigate('/projects')}}>Projects</li>
-                        <li className='arrow headerLi' onClick={display} >Pages<AiOutlineDown size={"15px"}/> 
-                            <div className={`float ${float ? "set" : ""} `}>
-                                <div className="items" onClick={()=>{navigate('/pricing')}}>Pricing Plan</div>
-                                <div className="items" onClick={()=>{navigate('/blog')}}>Blog Post</div>
-                                <div className="items" onClick={()=>{navigate('/team')}}>Team Members</div>
-                                <div className="items" onClick={()=>{navigate('/testimonial')}}>Testimonial</div>
-                                <div className="items" onClick={()=>{navigate('/page404')}}>404 Page</div>
-                            </div>
-                        </li>
-                        <li className='headerLi' onClick={()=>{navigate('/contact')}}>Contact</li>
+                        <li className='headerLi' onClick={() => { navigate('/') }}>Home</li>
+                        <li className='headerLi' onClick={() => { navigate('/about') }}>About</li>
+
+
+                        {false &&
+                            <>
+                                <li className='headerLi' onClick={() => { navigate('/services') }}>Services</li>
+                                <li className='headerLi' onClick={() => { navigate('/projects') }}>Projects</li>
+                                <li className='arrow headerLi' onClick={display} >Pages<AiOutlineDown size={"15px"} />
+                                    <div className={`float ${float ? "set" : ""} `}>
+                                        <div className="items" onClick={() => { navigate('/pricing') }}>Pricing Plan</div>
+                                        <div className="items" onClick={() => { navigate('/blog') }}>Blog Post</div>
+                                        <div className="items" onClick={() => { navigate('/team') }}>Team Members</div>
+                                        <div className="items" onClick={() => { navigate('/testimonial') }}>Testimonial</div>
+                                        <div className="items" onClick={() => { navigate('/page404') }}>404 Page</div>
+                                    </div>
+                                </li>
+                            </>
+                        }
+                        <li className='headerLi' onClick={() => { navigate('/contact') }}>Contact</li>
+                        <li className='headerLi' onClick={() => { navigate('/signUp') }}>SignUp</li>
+                        <li className='headerLi' onClick={() => { navigate('/login') }}>Login</li>
                     </ul>
-                <FaBars className='mobile' size={"25px"} onClick={() => { setToggle(!toggle) }} />
+                    <FaBars className='mobile' size={"25px"} onClick={() => { setToggle(!toggle) }} />
                 </div>
             </div>
         </>
