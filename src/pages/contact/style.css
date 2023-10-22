@@ -53,6 +53,12 @@
 .myMargin{
     margin-top: 5rem;
 }
+.validation{
+    color: red;
+    margin-block: -10px;
+    margin-left: 0.5rem;
+    font-size: .8rem;
+}
 @media (max-width:430px){
     .contactContainer{
         flex-direction: column;
