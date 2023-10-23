@@ -18,38 +18,43 @@ import './App.css'
 
 import { AiOutlineArrowUp } from "react-icons/ai"
 import Header from './components/header/Header'
+import AppContext from './context/AppContext'
 
 function App() {
 
+
   return (
     <>
-      <Header />
-      <Routes>
 
-        <Route element={<PrivateComponent />}>
-          <Route exact path="/services" element={<ServiceAndTestimonial />} />
-          <Route exact path="/projects" element={<Projects />} />
-          <Route exact path="/pricing" element={<Pricing />} />
-          <Route exact path="/blog" element={<Blog />} />
-          <Route exact path="/team" element={<Team />} />
-          <Route exact path="/testimonial" element={<Testimonial />} />
-        </Route>
+      <AppContext>
+        <Header />
+        <Routes>
 
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/about" element={<About />} />
-        <Route exact path="/contact" element={<Contact />} />
-        <Route exact path="/signUp" element={<SignUp />} />
-        <Route exact path="/login" element={<Login />} />
-        {/* <Route exact path="*" element={<Page404 />} />
-        <Route exact path="/page404" element={<Page404 />} /> */}
+          <Route element={<PrivateComponent />}>
+            <Route exact path="/services" element={<ServiceAndTestimonial />} />
+            <Route exact path="/projects" element={<Projects />} />
+            <Route exact path="/pricing" element={<Pricing />} />
+            <Route exact path="/blog" element={<Blog />} />
+            <Route exact path="/team" element={<Team />} />
+            <Route exact path="/testimonial" element={<Testimonial />} />
+          </Route>
 
-      </Routes>
-      <Footer />
-      {
-        <AiOutlineArrowUp className='homeButton' onClick={() => { window.scroll({ top: 0, left: 0, behavior: "smooth" }) }} />
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/about" element={<About />} />
+          <Route exact path="/contact" element={<Contact />} />
+          <Route exact path="/signUp" element={<SignUp />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="*" element={<Page404 />} />
+          <Route exact path="/page404" element={<Page404 />} />
 
-      }
+        </Routes>
+        <Footer />
+        {
+          <AiOutlineArrowUp className='homeButton' onClick={() => { window.scroll({ top: 0, left: 0, behavior: "smooth" }) }} />
 
+        }
+
+      </AppContext>
     </>
   )
 }

@@ -1,8 +1,12 @@
 import React,{useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 
+import { useContext } from 'react';
+import { Context } from '../../context/AppContext';
 function Login() {
 
+    const data=useContext(Context);
+    console.log(data);
 
     const navigate = useNavigate();
 
@@ -16,12 +20,18 @@ function Login() {
             setCheck(true)
             return false;
         }
-        const data = await fetch("http://localhost:5000/userData");
-        const result=await data.json();
+        const data = await fetch("http://localhost:5000/login",{
+            method:"post",
+            body:JSON.stringify({email,password}),
+            headers:{
+                "Content-Type":"application/json"
+            }
+        });
         setEmail("")
         setPassword("")
+        setCheck(false)
 
-        console.log(result);
+        console.log(await data.json());
 
     }
 
