@@ -1,15 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Outlet } from 'react-router-dom'
+import { Context } from '../../context/AppContext'
 
 function PrivateComponent() {
 
     const [result, setResult] = useState("")
 
-    // const data=async()=>{
-    //     const data=await fetch("http://localhost:5000/formData");
-    //     const result=await data.json();
-    //     console.log("asdasdsd",result);
-    // }
+    const {data}=useContext(Context);
 
     const userData = async () => {
         const data = await fetch("http://localhost:5000/userData");
@@ -21,7 +18,7 @@ function PrivateComponent() {
     }, [])
 
     return (
-        !setResult ? <Outlet /> : ""
+        data ? <Outlet /> : ""
     )
 }
 

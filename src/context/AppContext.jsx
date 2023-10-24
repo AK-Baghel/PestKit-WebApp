@@ -1,16 +1,25 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import { createContext } from 'react'
-export const Context=createContext();
+export const Context = createContext();
 
-function AppContext({children}) {
+function AppContext({ children }) {
 
-    const [data, setdata] = useState("ankit")
-    const [data1, setdata1] = useState("kumar")
+  const [data, setdata] = useState(false)
+  const [privateComp, setPrivateComp] = useState("false")
+
+  const loginValid = (valid) => {
+    setdata(valid);
+  }
+  const privateFunc = (data) => {
+    privateComp(data)
+  }
 
 
   return (
-    <Context.Provider value={{data,data1}}>
-        {children}
+    <Context.Provider value={
+      { data, loginValid, privateComp, privateFunc }
+    }>
+      {children}
     </Context.Provider>
   )
 }

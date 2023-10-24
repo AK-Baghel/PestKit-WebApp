@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Carousel from './carousel/Carousel'
 import MiniServices from './miniServices/miniServices'
 import AboutSecton1 from '../about/aboutSection1/AboutSecton1'
@@ -10,20 +10,36 @@ import Pricing from '../pricing/Pricing'
 import Team from '../team/Team'
 import Testimonial from '../testimonial/Testimonial'
 import "./style.scss"
-
+import { Context } from '../../context/AppContext'
 function Home() {
+
+  const { data } = useContext(Context)
+
   return (
     <>
       <Carousel />
       <MiniServices />
       <AboutSecton1 />
-      <Services />
-      <Projects />
-      <Blog />
+      {
+        data &&
+        <>
+          <Services />
+          <Projects />
+          <Blog />
+        </>
+      }
+
       <AboutSection2 />
-      <Pricing />
-      <Team />
-      <Testimonial />
+
+      {
+        data &&
+        <>
+          <Pricing />
+          <Team />
+          <Testimonial />
+        </>
+      }
+
     </>
 
   )

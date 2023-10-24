@@ -1,18 +1,18 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import { useContext } from 'react';
 import { Context } from '../../context/AppContext';
 function Login() {
 
-    const data=useContext(Context);
-    console.log(data);
+    const { data, loginValid, privateFunc } = useContext(Context);
 
     const navigate = useNavigate();
 
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [check, setCheck] = useState(false);
+    // const [valid, setValid] = useState()
 
 
     const login = async () => {
@@ -20,20 +20,26 @@ function Login() {
             setCheck(true)
             return false;
         }
-        const data = await fetch("http://localhost:5000/login",{
-            method:"post",
-            body:JSON.stringify({email,password}),
-            headers:{
-                "Content-Type":"application/json"
+        const data = await fetch("http://localhost:5000/login", {
+            method: "post",
+            body: JSON.stringify({ email, password }),
+            headers: {
+                "Content-Type": "application/json"
             }
         });
         setEmail("")
         setPassword("")
         setCheck(false)
+        const result = await data.json();
+        loginValid(result);
+        console.log(result);
 
-        console.log(await data.json());
-
+        if (result) {
+            navigate("/")
+        }
     }
+
+
 
     return (
         <div className="signUpContainer">

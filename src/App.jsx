@@ -12,6 +12,7 @@ import Footer from "./components/footer/Footer"
 import PrivateComponent from './components/privateComponent/PrivateComponent'
 import SignUp from './pages/signUp/signUp'
 import Login from './pages/login/Login'
+import Dashboard from './pages/dashboard/Dashboard'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
@@ -22,6 +23,7 @@ import AppContext from './context/AppContext'
 
 function App() {
 
+  
 
   return (
     <>
@@ -37,6 +39,7 @@ function App() {
             <Route exact path="/blog" element={<Blog />} />
             <Route exact path="/team" element={<Team />} />
             <Route exact path="/testimonial" element={<Testimonial />} />
+            <Route exact path="/dashboard" element={<Dashboard />} />
           </Route>
 
           <Route exact path="/" element={<Home />} />

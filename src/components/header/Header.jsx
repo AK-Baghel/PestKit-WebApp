@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 
 import { FaSpider } from "react-icons/fa"
 import { FaBars } from "react-icons/fa"
@@ -12,10 +13,14 @@ import { IoCall } from "react-icons/io5"
 import { MdEmail } from "react-icons/md"
 import { AiOutlineDown } from "react-icons/ai"
 import { useNavigate } from 'react-router-dom'
+import { Context } from '../../context/AppContext'
 
 import "./style.scss"
 
 function Header() {
+
+    const { data, loginValid } = useContext(Context)
+
     const [toggle, setToggle] = useState(true);
     const [float, setFloat] = useState(true);
     const navigate = useNavigate();
@@ -23,6 +28,8 @@ function Header() {
     const display = (e) => {
         setFloat(!float)
     }
+
+    const location=useLocation();
 
 
     return (
@@ -61,15 +68,14 @@ function Header() {
                         <FaSpider className='spider' />
                     </div>
                     <ul className={`headerUl ${toggle ? "show" : ""}`}>
-                        <li className='headerLi' onClick={() => { navigate('/') }}>Home</li>
-                        <li className='headerLi' onClick={() => { navigate('/about') }}>About</li>
+                        <li className= {`headerLi ${location.pathname==="/" ? "active" : ""}`} onClick={() => { navigate('/') }}>Home</li>
+                        <li className={`headerLi ${location.pathname==="/about" ? "active" : ""}`} onClick={() => { navigate('/about') }}>About</li>
 
-
-                        {false &&
+                        {data &&
                             <>
-                                <li className='headerLi' onClick={() => { navigate('/services') }}>Services</li>
-                                <li className='headerLi' onClick={() => { navigate('/projects') }}>Projects</li>
-                                <li className='arrow headerLi' onClick={display} >Pages<AiOutlineDown size={"15px"} />
+                                <li className={`headerLi ${location.pathname==="/services" ? "active" : ""}`} onClick={() => { navigate('/services') }}>Services</li>
+                                <li className={`headerLi ${location.pathname==="/projects" ? "active" : ""}`} onClick={() => { navigate('/projects') }}>Projects</li>
+                                <li className='arrow headerLi'  onClick={display} >Pages<AiOutlineDown size={"15px"} />
                                     <div className={`float ${float ? "set" : ""} `}>
                                         <div className="items" onClick={() => { navigate('/pricing') }}>Pricing Plan</div>
                                         <div className="items" onClick={() => { navigate('/blog') }}>Blog Post</div>
@@ -80,9 +86,23 @@ function Header() {
                                 </li>
                             </>
                         }
-                        <li className='headerLi' onClick={() => { navigate('/contact') }}>Contact</li>
-                        <li className='headerLi' onClick={() => { navigate('/signUp') }}>SignUp</li>
-                        <li className='headerLi' onClick={() => { navigate('/login') }}>Login</li>
+
+                        <li className={`headerLi ${location.pathname==="/contact" ? "active" : ""}`} onClick={() => { navigate('/contact') }}>Contact</li>
+
+                        {
+                            data ?
+                                <>
+                                    <li className={`headerLi ${location.pathname==="/dashboard" ? "active" : ""}`} onClick={() => { navigate('/dashboard') }}>Dashboard</li>
+                                    <li className={`headerLi`} onClick={() => { navigate('/login'); loginValid(false) }}>Logout</li>
+
+                                </>
+                                :
+                                <>
+                                    <li className={`headerLi ${location.pathname==="/signUp" ? "active" : ""}`} onClick={() => { navigate('/signUp') }}>SignUp</li>
+                                    <li className={`headerLi ${location.pathname==="/login" ? "active" : ""}`} onClick={() => { navigate('/login') }}>Login</li>
+                                </>
+                        }
+
                     </ul>
                     <FaBars className='mobile' size={"25px"} onClick={() => { setToggle(!toggle) }} />
                 </div>

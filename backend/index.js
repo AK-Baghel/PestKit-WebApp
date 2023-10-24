@@ -51,11 +51,11 @@ app.post('/login',async(req,resp)=>{
             resp.send(user);
         }
         else{
-            resp.send({result:'no user found'})
+            resp.send('false')
         }
     }
     else{
-        resp.send({result:'no user found'})
+        resp.send('false')
     }
 })
 
