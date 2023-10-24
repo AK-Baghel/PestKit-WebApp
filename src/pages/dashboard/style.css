@@ -1,0 +1,54 @@
+.dashCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-block: 2rem;
+}
+
+.dashBoxs {
+    display: flex;
+    list-style: none;
+
+}
+
+.dashBoxsRow {
+
+    font-size: 1.3rem;
+    padding: 10px;
+    font-weight: 800;
+
+    background-color: rgb(152, 255, 126);
+    border: 1px solid black;
+    text-align: center;
+}
+.dashNo{
+    width: 50px;
+}
+.dashName {
+    width: 150px;
+}
+
+.dashEmail {
+    width: 200px;
+}
+
+.dashSub {
+    width: 200px;
+}
+
+.dashMessage {
+    width: 300px;
+}
+.dashBox{
+    display: flex;
+    list-style: none;
+    background-color: rgb(236, 236, 236);
+}
+.dashRow{
+    border: 1px solid black;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

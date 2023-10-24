@@ -29,15 +29,13 @@ function Header() {
         setFloat(!float)
     }
 
-    const location=useLocation();
+    const location = useLocation();
 
     useEffect(() => {
         const user = localStorage.getItem("user");
         if (user)
-          loginValid(user);
-      }, [])
-
-
+            loginValid(user);
+    }, [])
 
 
     return (
@@ -76,14 +74,14 @@ function Header() {
                         <FaSpider className='spider' />
                     </div>
                     <ul className={`headerUl ${toggle ? "show" : ""}`}>
-                        <li className= {`headerLi ${location.pathname==="/" ? "active" : ""}`} onClick={() => { navigate('/') }}>Home</li>
-                        <li className={`headerLi ${location.pathname==="/about" ? "active" : ""}`} onClick={() => { navigate('/about') }}>About</li>
+                        <li className={`headerLi ${location.pathname === "/" ? "active" : ""}`} onClick={() => { navigate('/') }}>Home</li>
+                        <li className={`headerLi ${location.pathname === "/about" ? "active" : ""}`} onClick={() => { navigate('/about') }}>About</li>
 
                         {data &&
                             <>
-                                <li className={`headerLi ${location.pathname==="/services" ? "active" : ""}`} onClick={() => { navigate('/services') }}>Services</li>
-                                <li className={`headerLi ${location.pathname==="/projects" ? "active" : ""}`} onClick={() => { navigate('/projects') }}>Projects</li>
-                                <li className='arrow headerLi'  onClick={display} >Pages<AiOutlineDown size={"15px"} />
+                                <li className={`headerLi ${location.pathname === "/services" ? "active" : ""}`} onClick={() => { navigate('/services') }}>Services</li>
+                                <li className={`headerLi ${location.pathname === "/projects" ? "active" : ""}`} onClick={() => { navigate('/projects') }}>Projects</li>
+                                <li className='arrow headerLi' onClick={display} >Pages<AiOutlineDown size={"15px"} />
                                     <div className={`float ${float ? "set" : ""} `}>
                                         <div className="items" onClick={() => { navigate('/pricing') }}>Pricing Plan</div>
                                         <div className="items" onClick={() => { navigate('/blog') }}>Blog Post</div>
@@ -95,19 +93,19 @@ function Header() {
                             </>
                         }
 
-                        <li className={`headerLi ${location.pathname==="/contact" ? "active" : ""}`} onClick={() => { navigate('/contact') }}>Contact</li>
+                        <li className={`headerLi ${location.pathname === "/contact" ? "active" : ""}`} onClick={() => { navigate('/contact') }}>Contact</li>
 
                         {
                             data ?
                                 <>
-                                    <li className={`headerLi ${location.pathname==="/dashboard" ? "active" : ""}`} onClick={() => { navigate('/dashboard') }}>Dashboard</li>
-                                    <li className={`headerLi`} onClick={() => { navigate('/login'); loginValid(false); localStorage.clear("user") }}>Logout</li>
+                                    <li className={`headerLi ${location.pathname === "/dashboard" ? "active" : ""}`} onClick={() => { navigate('/dashboard') }}>Dashboard</li>
+                                    <li className={`headerLi`} onClick={() => { navigate('/login'); loginValid(false); localStorage.clear("user") }}>Logout ({JSON.parse(data).name})</li>
 
                                 </>
                                 :
                                 <>
-                                    <li className={`headerLi ${location.pathname==="/signUp" ? "active" : ""}`} onClick={() => { navigate('/signUp') }}>SignUp</li>
-                                    <li className={`headerLi ${location.pathname==="/login" ? "active" : ""}`} onClick={() => { navigate('/login') }}>Login</li>
+                                    <li className={`headerLi ${location.pathname === "/signUp" ? "active" : ""}`} onClick={() => { navigate('/signUp') }}>SignUp</li>
+                                    <li className={`headerLi ${location.pathname === "/login" ? "active" : ""}`} onClick={() => { navigate('/login') }}>Login</li>
                                 </>
                         }
 

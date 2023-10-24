@@ -18,6 +18,10 @@ app.get("/formData",async (req,resp)=>{
     }
 
 })
+app.delete("/formData/:id",async (req,resp)=>{
+    const result=await Contact.deleteOne({_id:req.params.id});
+    resp.send(result);
+})
 
 app.post("/contact-form",async (req,resp)=>{
     let contact=new Contact(req.body)
