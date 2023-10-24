@@ -5,19 +5,19 @@ export const Context = createContext();
 function AppContext({ children }) {
 
   const [data, setdata] = useState(false)
-  const [privateComp, setPrivateComp] = useState("false")
+  // const [privateComp, setPrivateComp] = useState("false")
 
   const loginValid = (valid) => {
     setdata(valid);
   }
-  const privateFunc = (data) => {
-    privateComp(data)
-  }
+  // const privateFunc = (data) => {
+  //   privateComp(data)
+  // }
 
 
   return (
     <Context.Provider value={
-      { data, loginValid, privateComp, privateFunc }
+      { data, loginValid }
     }>
       {children}
     </Context.Provider>

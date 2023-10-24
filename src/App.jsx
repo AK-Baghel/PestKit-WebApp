@@ -15,11 +15,13 @@ import Login from './pages/login/Login'
 import Dashboard from './pages/dashboard/Dashboard'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import './App.css'
 
 import { AiOutlineArrowUp } from "react-icons/ai"
 import Header from './components/header/Header'
 import AppContext from './context/AppContext'
+import { useEffect } from 'react'
 
 function App() {
 

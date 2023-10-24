@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext,  } from 'react'
 import Carousel from './carousel/Carousel'
 import MiniServices from './miniServices/miniServices'
 import AboutSecton1 from '../about/aboutSection1/AboutSecton1'
@@ -13,7 +13,9 @@ import "./style.scss"
 import { Context } from '../../context/AppContext'
 function Home() {
 
-  const { data } = useContext(Context)
+  const { data,loginValid } = useContext(Context)
+  
+  
 
   return (
     <>

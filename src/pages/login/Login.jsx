@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import { useContext } from 'react';
@@ -34,7 +34,9 @@ function Login() {
         loginValid(result);
         console.log(result);
 
+
         if (result) {
+            localStorage.setItem("user", JSON.stringify(result))
             navigate("/")
         }
     }

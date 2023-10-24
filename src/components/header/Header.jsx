@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
 import { FaSpider } from "react-icons/fa"
@@ -30,6 +30,14 @@ function Header() {
     }
 
     const location=useLocation();
+
+    useEffect(() => {
+        const user = localStorage.getItem("user");
+        if (user)
+          loginValid(user);
+      }, [])
+
+
 
 
     return (
@@ -93,7 +101,7 @@ function Header() {
                             data ?
                                 <>
                                     <li className={`headerLi ${location.pathname==="/dashboard" ? "active" : ""}`} onClick={() => { navigate('/dashboard') }}>Dashboard</li>
-                                    <li className={`headerLi`} onClick={() => { navigate('/login'); loginValid(false) }}>Logout</li>
+                                    <li className={`headerLi`} onClick={() => { navigate('/login'); loginValid(false); localStorage.clear("user") }}>Logout</li>
 
                                 </>
                                 :
